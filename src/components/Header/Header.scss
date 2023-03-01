@@ -1,6 +1,13 @@
 @use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
 
 .nav {
+
+    @include tablet {
+        padding: 2rem;
+        display: flex;
+        justify-content: space-between;
+    }
 
     &__logo {
         max-width: 7.5rem;
@@ -13,13 +20,18 @@
     &__input {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         gap: 1rem; 
+
+        @include tablet {
+            flex-wrap: nowrap;
+        }
     }
 
     &__input-box {
         flex: 1;
         max-width: 100%;
-        min-width: 15rem;
+        min-width: 13rem;
         margin-bottom: 1rem;
         background-image: url("../../assets/Icons/search.svg");
         background-repeat: no-repeat;
@@ -34,11 +46,16 @@
         background-color: $secondary-color-bright;
         outline: none;
         resize: none;
+
+        @include tablet {
+            min-width: 15rem;
+            min-height: 2.5rem;
+        }
     }
 
     &__input-avatar {
         padding: 1rem;
-      
+
         &:focus {
             border: 0;
             outline: 2px solid $primary-color-contrast;
@@ -52,7 +69,11 @@
         border-radius: 50%;
         background-color: $secondary-color-medium;
         object-fit: cover;
-        object-position: 20%;   
+        object-position: 20%;  
+
+        @include tablet {
+            order: 3;
+        } 
     }
 }
 
@@ -70,6 +91,11 @@
     border-radius: 4px;
     font-size: 0.72rem;
     font-weight: 700;
-    border: 0
+    border: 0;
+
+    @include tablet {
+        min-width: 9.375rem;
+        padding: 0 2rem;
+    }
 
 }

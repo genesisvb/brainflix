@@ -9,13 +9,11 @@ return (
     <header className="header">
         <nav class="nav">
             <a href="../../index.html"><img className="nav__logo" src={logo}  alt="logo" /></a>
-            <div className="nav__input">
+            <form className="nav__input">
                 <input img src={inputIcon} className="nav__input-box" type="text" placeholder="Search" />
                 <img src={avatar} className="nav__input-photo" alt="avatar" />
-            </div>
-            <div>
                 <button className="button">Upload</button>
-            </div>
+            </form>
         </nav>
     </header>
 )       
