@@ -4,7 +4,6 @@
 .nav {
 
     @include tablet {
-        padding: 2rem;
         display: flex;
         justify-content: space-between;
     }
@@ -72,6 +71,8 @@
         object-position: 20%;  
 
         @include tablet {
+            width: 40px;
+            height: 40px;
             order: 3;
         } 
     }
