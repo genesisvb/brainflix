@@ -1,12 +1,15 @@
 // Color palette //
 
-$color-black: #323232;
-$color-silver: #AFAFAF;
-$color-white: #FFFFFF;
-$primary-color-blue: #0095FF;
-$color-dark-black: #000000;
-$color-mercury: #E1E1E1;
-$color-alabaster: #FAFAFA;
+$primary-color-dark: #323232;
+$primary-color-medium: #AFAFAF;
+$primary-color-bright: #FFFFFF;
+$primary-color-contrast: #0095FF;
+$secondary-color-dark: #000000;
+$secondary-color-medium: #E1E1E1;
+$secondary-color-bright: #FAFAFA;
+$secondary-color-contrast: #0065AD;
+
+
 
 // Breakpoints //
 
@@ -50,7 +53,7 @@ $padding-between-components: 1rem;
 
 // // LABELS & BUTTONS
 
-// font-size: 0.625rem;
+// font-size: 0.72rem;
 // line-height: 1.25rem;
 // font-weight: Bold 700;
 // text-transform: uppercase;
