@@ -1,0 +1,14 @@
+@use './styles/partials/variables' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/fonts' as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    // outline: 1px solid purple;
+}
+
+.App__container {
+    padding: 1rem;
+}

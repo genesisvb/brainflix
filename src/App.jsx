@@ -1,12 +1,15 @@
 import './App.scss';
-import Header from './components/Component/Header';
+import Header from "./components/Header/Header";
+// import Hero from './components/Hero/Hero';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-    
-    </div>
+    <div className="App__container">
+      <div className="App">
+        <Header />
+        {/* <Hero /> */}
+      </div>
+    </div>  
   );
 }
 
