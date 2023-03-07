@@ -2,10 +2,17 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
+    
+    padding: 1rem;
 
     @include tablet {
+        padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
+    }
+
+    @include desktop {
+        padding: 1rem 8rem;
     }
 
     &__logo {
@@ -13,7 +20,11 @@
         max-height: 1.5625rem;
         display: block;
         margin: auto;  
-        margin-bottom: 1rem;  
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        } 
     }
 
     &__input {
@@ -24,6 +35,11 @@
 
         @include tablet {
             flex-wrap: nowrap;
+            align-items: center;
+        }
+
+        @include desktop {
+            gap: 2rem;
         }
     }
 
@@ -49,6 +65,7 @@
         @include tablet {
             min-width: 15rem;
             min-height: 2.5rem;
+            margin-bottom: 0;
         }
     }
 

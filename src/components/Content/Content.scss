@@ -1,0 +1,48 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.content {
+    padding: 1rem;
+
+    &__title {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+
+    &__info-container {
+        display: flex;
+    }
+
+    &__subtitle-container {
+        margin-bottom: 1rem;
+    }
+
+    &__author {
+        font-size: 0.8125rem;
+        line-height: 1.125;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__date {
+        color: $primary-color-medium
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:flex-end;
+    }
+
+    &__icon {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        font-size: 0.8125rem;
+        line-height: 1.125rem;
+    }
+}
