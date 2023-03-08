@@ -1,0 +1,107 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.comments {
+    padding: 1rem;
+
+    @include tablet {
+        padding: 3.25rem 2.5rem 2.25rem;
+    }
+
+    @include desktop {
+        display: flex;
+        padding: 3.25rem 8rem 2.25rem;
+    }
+
+    &__wrapper {
+
+        @include tablet {
+            padding: 0 4rem;
+        }
+
+        @include desktop {
+            padding: 0;
+            width: 50%;
+            margin: 0 auto; 
+        }
+    }
+}
+
+.comment-form {
+    display: flex;
+    border-bottom: 1px solid $secondary-color-medium;
+    padding-bottom: 1rem;
+
+    &__form {
+        flex-grow: 1;
+        align-items: center;
+        justify-content: right;
+        gap: 1.5rem;
+
+        @include tablet {
+            display: flex;
+        }
+    }
+
+    &__input-label {
+        color: $primary-color-medium;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.8125rem;
+        margin-bottom: 0.25rem;
+        display: block;
+
+        @include tablet {
+            font-size: 1rem;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        min-width: 15rem;
+        margin-bottom: 1rem;
+        height: 6rem;
+        border-radius: 4px;
+        border-color: $primary-color-medium;
+        padding: 0.75rem;
+        font-family: 'AvenirNext LT Pro';
+        color: black;
+        background-color: $secondary-color-bright;
+        outline: none;
+        resize: none;
+
+        &:focus {
+            border-color: $primary-color-dark;
+        }
+
+        @include tablet {
+            height: 3rem;
+            padding: 1rem;
+            min-width: 28rem;
+        }   
+    }
+
+    &__button-wrapper {
+        @include tablet {
+            text-align: right;
+        }
+    } 
+}
+
+.button--comments {
+    
+    height: 2.5rem;
+    background-color: $primary-color-contrast;
+    color: $primary-color-bright;
+    background-image: url("../../assets/Icons/add_comment.svg"); 
+    background-repeat: no-repeat;
+    background-position: 0.5rem center;
+    background-size: 1.2rem;
+    width: 100%;
+    min-width: 9.375rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border: 0;
+}
