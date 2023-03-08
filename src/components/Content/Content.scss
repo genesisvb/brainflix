@@ -4,23 +4,48 @@
 .content {
     padding: 1rem;
 
+    @include tablet {
+        padding: 2rem;
+    }
+
+    @include desktop {
+        padding-left: 8rem;
+        padding-right: 0;
+    }
+
     &__title {
         font-size: 1.5rem;
         line-height: 2rem;
-        font-weight: 400;
+        font-weight: 600;
         margin-bottom: 1rem;
+        color: $primary-color-dark;
+
+        @include tablet {
+            font-size: 2rem;
+        }
     }
 
     &__info-container {
         display: flex;
+        border-bottom: 1px solid $secondary-color-medium;
+        margin-bottom: 1.5rem;
+        justify-content: space-between;
+        padding-right: 2.5rem;
+        font-size: 0.8125rem;
     }
 
     &__subtitle-container {
         margin-bottom: 1rem;
+        color: $primary-color-dark;
+
+        @include tablet {
+            display: flex;
+            gap: 2rem;
+            margin-bottom: 0;
+        }
     }
 
     &__author {
-        font-size: 0.8125rem;
         line-height: 1.125;
         font-weight: 700;
         margin-bottom: 1rem;
@@ -30,19 +55,35 @@
         color: $primary-color-medium
     }
 
-    &__icons {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items:flex-end;
+    &__counts {
+        @include tablet {
+            display: flex;
+            gap: 2rem;
+        }
+    }
+
+    &__count {
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 0;
+        }
     }
 
     &__icon {
-        margin-bottom: 1rem;
+        vertical-align: middle;
     }
 
     &__text {
         font-size: 0.8125rem;
-        line-height: 1.125rem;
+        line-height: 1.25rem;
+
+        @include tablet {
+            font-size: 0.875rem;
+        }
+
+        @include desktop {
+            padding-right: 2rem;
+        }
     }
 }

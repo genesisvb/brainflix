@@ -6,18 +6,21 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
-    // outline: 1px solid purple;
 }
 
-.App__container {
-    // padding: 1rem;
+.app {
     font-family: 'AvenirNext LT Pro';
 
-//     @include tablet {
-//         padding: 1rem 2rem;
-//     }
+    &__main-wrapper {
+        @include desktop {
+            display: flex;
+        }
+    }
 
-//     @include desktop {
-//         padding: 1rem 8rem;
-//     }
+    &__video-content {
+        @include desktop {
+            width: 70%;
+            border-right: 1px solid $secondary-color-medium;
+        }
+    }
 }

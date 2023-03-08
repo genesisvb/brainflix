@@ -1,63 +1,68 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-// .comment {
-//     padding: 1rem 0;
-//     border-bottom: 1px solid $secondary-color-medium;
+.comment {
 
-//     @include tablet {
-//         padding: 1.5rem 0;
-//     }
+    display: flex;
+    border-bottom: 1px solid $secondary-color-medium;
+    margin-top: 1rem;
 
-//     &__wrapper {
-//         display: flex;
-//     }
+    @include desktop {
+        padding: 0 2rem 0 1rem;
+    }
 
-//     &__info {
-//         flex-grow: 1;
-//     }
+    &__wrapper {
+        display: flex;
+    }
 
-//     &__heading {
-//         display: flex;
-//         justify-content: space-between;
-//         margin-bottom: 0.5rem;
-//     }
+    &__info {
+        flex-grow: 1;
+    }
 
-//     &__author {
-//         font-weight: 600;
-//         color: $primary-color-dark;
-//     }
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+    }
 
-//     &__date {
-//         color: $primary-color-medium;
-//     }
+    &__author {
+        font-weight: 700;
+        color: $primary-color-dark;
+    }
 
-//     &__text {
-//         line-height: 1.175rem;
+    &__date {
+        color: $primary-color-medium;
+    }
 
-//         @include tablet {
-//             line-height: 1.5rem;
-//         }
-//     }
-// }
+    &__text {
+        line-height: 1.175rem;
+        margin-bottom: 1rem;       
 
-
-// .comment-avatar {
-//     padding-right: 1rem;
-
-//     &__photo {
-//         height: 36px;
-//         width: 36px;
-//         border-radius: 50%;
-//         background-color: $secondary-color-medium;
-//         object-fit: cover;
-//         object-position: 20%;
-
-//         @include tablet {
-//             height: 48px;
-//             width: 48px;
-//         }
-//     }
-// }
+        @include tablet {
+            line-height: 1.5rem;
+        }
+    }
+}
 
 
+.comment-avatar {
+    padding-right: 1rem;
+
+    @include tablet {
+        padding-right: 2rem;
+    }
+
+    &__photo {
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        background-color: $secondary-color-medium;
+        object-fit: cover;
+        object-position: 20%;
+
+        @include tablet {
+            height: 48px;
+            width: 48px;
+        }
+    }
+}
