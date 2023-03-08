@@ -5,7 +5,7 @@ import avatar from "../../assets/images/Mohan-muruge.jpg";
 function CommentForm({comments}) {
     return (
         <section className="comments">
-            {/* <h4 className="comment__count">Comments {comments.length}</h4> */}
+            <p className="comments__count">{comments.length} Comments </p>
 
             <div className="comment-form">
                 <div className="comment-avatar">

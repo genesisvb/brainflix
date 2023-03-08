@@ -5,12 +5,19 @@
     padding: 1rem;
 
     @include tablet {
-        padding: 2rem;
+        padding: 1rem 2rem;
     }
 
     @include desktop {
         padding-left: 9rem;
         padding-right: 2rem;
+    }
+
+    &__count {
+        margin-bottom: 2rem;
+        color: $primary-color-dark;
+        font-weight: 700;
+        font-size: 0.8675rem;
     }
 
     &__wrapper {
@@ -52,7 +59,7 @@
         display: block;
 
         @include tablet {
-            font-size: 1rem;
+            font-size: 0.765rem;
         }
     }
 

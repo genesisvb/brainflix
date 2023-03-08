@@ -27,7 +27,7 @@ function App() {
       <div className="app__main-wrapper">
         <div className="app__video-content">
           <Content selectedVideo={selectedVideo} />
-          <CommentForm /> 
+          <CommentForm comments={selectedVideo.comments}/> 
           <CommentList comments={selectedVideo.comments} />
         </div>
         
