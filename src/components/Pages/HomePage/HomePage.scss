@@ -1,0 +1,17 @@
+@use "../../../styles/partials/variables" as *;
+@use "../../../styles/partials/mixins" as *;
+
+.home-page {
+  &__main-wrapper {
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__video-content {
+    @include desktop {
+      width: 70%;
+      border-right: 1px solid $secondary-color-medium;
+    }
+  }
+}
