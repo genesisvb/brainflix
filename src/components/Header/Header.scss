@@ -2,118 +2,131 @@
 @use "../../styles/partials/mixins" as *;
 
 .nav {
-    
-    padding: 1rem;
+  padding: 1rem;
+
+  @include tablet {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    padding: 1rem 8rem;
+  }
+
+  &__logo {
+    max-width: 7.5rem;
+    max-height: 1.5625rem;
+    display: block;
+    margin: auto;
+    margin-bottom: 1rem;
 
     @include tablet {
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    @include tablet {
+      flex-wrap: nowrap;
+      align-items: center;
     }
 
     @include desktop {
-        padding: 1rem 8rem;
+      gap: 2rem;
     }
+  }
 
-    &__logo {
-        max-width: 7.5rem;
-        max-height: 1.5625rem;
-        display: block;
-        margin: auto;  
-        margin-bottom: 1rem;
+  &__input-box {
+    flex: 1;
+    max-width: 100%;
+    min-width: 13rem;
+    margin-bottom: 1rem;
+    background-image: url("../../assets/Icons/search.svg");
+    background-repeat: no-repeat;
+    background-position: 1rem center;
+    height: 2.25rem;
+    border: 1px solid $secondary-color-medium;
+    border-radius: 4px;
+    padding: 0.75rem 2.8rem;
+    font-family: "AvenirNext LT Pro";
+    font-size: 0.7rem;
+    color: black;
+    background-color: $secondary-color-bright;
+    outline: none;
+    resize: none;
 
-        @include tablet {
-            margin-bottom: 0;
-        } 
+    @include tablet {
+      min-width: 15rem;
+      min-height: 2.5rem;
+      margin-bottom: 0;
     }
+  }
 
-    &__input {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1rem; 
+  &__input-avatar {
+    padding: 1rem;
 
-        @include tablet {
-            flex-wrap: nowrap;
-            align-items: center;
-        }
-
-        @include desktop {
-            gap: 2rem;
-        }
+    &:focus {
+      border: 0;
+      outline: 2px solid $primary-color-contrast;
     }
+  }
 
-    &__input-box {
-        flex: 1;
-        max-width: 100%;
-        min-width: 13rem;
-        margin-bottom: 1rem;
-        background-image: url("../../assets/Icons/search.svg");
-        background-repeat: no-repeat;
-        background-position: 1rem center;
-        height: 2.25rem;
-        border: 1px solid $secondary-color-medium;
-        border-radius: 4px;
-        padding: 0.75rem 2.8rem;
-        font-family: 'AvenirNext LT Pro';
-        font-size: 0.7rem;
-        color: black;
-        background-color: $secondary-color-bright;
-        outline: none;
-        resize: none;
+  &__input-photo {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    background-color: $secondary-color-medium;
+    object-fit: cover;
+    object-position: 20%;
 
-        @include tablet {
-            min-width: 15rem;
-            min-height: 2.5rem;
-            margin-bottom: 0;
-        }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      order: 3;
     }
-
-    &__input-avatar {
-        padding: 1rem;
-
-        &:focus {
-            border: 0;
-            outline: 2px solid $primary-color-contrast;
-        }
-    }
-
-    &__input-photo {
-
-        height: 36px;
-        width: 36px;
-        border-radius: 50%;
-        background-color: $secondary-color-medium;
-        object-fit: cover;
-        object-position: 20%;  
-
-        @include tablet {
-            width: 40px;
-            height: 40px;
-            order: 3;
-        } 
-    }
+  }
 }
 
 .button {
+  height: 2.5rem;
+  background-color: $primary-color-contrast;
+  color: $primary-color-bright;
+  background-image: url("../../assets/Icons/upload.svg");
+  background-repeat: no-repeat;
+  background-position: 0.5rem center;
+  background-size: 1.2rem;
+  width: 100%;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  border: 0;
 
-    height: 2.5rem;
-    background-color: $primary-color-contrast;
-    color: $primary-color-bright;
-    background-image: url("../../assets/Icons/upload.svg"); 
-    background-repeat: no-repeat;
-    background-position: 0.5rem center;
-    background-size: 1.2rem;
-    width: 100%;
-    text-transform: uppercase;
-    border-radius: 4px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    border: 0;
+  @include tablet {
+    min-width: 9.375rem;
+    padding: 0 2rem;
+  }
+
+  &--publish {
+    background-image: url("../../assets/Icons/publish.svg");
+    margin-bottom: 1rem;
 
     @include tablet {
-        min-width: 9.375rem;
-        padding: 0 2rem;
+      order: 2;
     }
+  }
 
+  &:hover {
+    background-color: $secondary-color-contrast;
+  }
 }
