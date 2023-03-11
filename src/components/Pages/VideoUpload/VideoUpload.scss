@@ -8,11 +8,20 @@
     padding: 2rem;
   }
 
+  @include desktop {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   &__title {
     color: $primary-color-dark;
-    padding-bottom: 2rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid $secondary-color-medium;
+
+    @include tablet {
+      font-size: 2rem;
+      border-bottom: 1px solid $secondary-color-medium;
+      padding-bottom: 2rem;
+    }
   }
 
   &__subtitle {
@@ -20,24 +29,49 @@
     font-weight: 700;
     text-transform: uppercase;
     color: $primary-color-medium;
+    margin-bottom: 0.5rem;
   }
 }
 
-.video__container {
+.video-container {
   @include tablet {
+    border-bottom: 1px solid $secondary-color-medium;
+    margin-bottom: 1.5rem;
+  }
+
+  @include desktop {
     display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
+  &__img {
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    @include tablet {
+      width: 50%;
+      margin-bottom: 1.5rem;
+
+      @include desktop {
+        width: 32%;
+      }
+    }
   }
 }
 
+.input-wrapper {
+  flex-grow: 1;
+}
 .input {
   &__label {
     display: block;
     color: #afafaf;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 0.8125rem;
+    font-size: 0.75rem;
     margin-bottom: 0.25rem;
   }
+
   &__field {
     width: 100%;
     min-width: 13rem;
@@ -45,13 +79,17 @@
     height: 2.25rem;
     border: 1px solid $secondary-color-medium;
     border-radius: 4px;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
     font-family: "AvenirNext LT Pro";
-    font-size: 0.7rem;
+    font-size: 0.8125rem;
     color: black;
     background-color: $secondary-color-bright;
     outline: none;
     resize: none;
+
+    &--large {
+      height: 6rem;
+    }
   }
 }
 
@@ -72,6 +110,7 @@
     display: flex;
     justify-content: center;
     color: $primary-color-contrast;
+    width: 9.375rem;
   }
 }
 
