@@ -3,6 +3,9 @@ import "./App.scss";
 import Header from "./components/Header/Header";
 import HomePage from "./components/Pages/HomePage/HomePage";
 import VideoUpload from "./components/Pages/VideoUpload/VideoUpload";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+dayjs.extend(relativeTime);
 
 function App() {
   return (
