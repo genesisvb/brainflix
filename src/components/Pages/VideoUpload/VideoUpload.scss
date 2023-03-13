@@ -106,6 +106,10 @@
   font-size: 0.72rem;
   font-weight: 700;
 
+  &:hover {
+    color: $secondary-color-contrast;
+  }
+
   @include tablet {
     display: flex;
     justify-content: center;
@@ -118,5 +122,6 @@
   @include tablet {
     display: flex;
     justify-content: right;
+    cursor: pointer;
   }
 }
