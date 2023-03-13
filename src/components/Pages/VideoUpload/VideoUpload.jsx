@@ -9,7 +9,11 @@ function VideoUpload() {
         <h2 className="video-upload__title">Upload Video</h2>
         <p className="video-upload__subtitle">Video Thumbnail</p>
         <div className="video-container">
-          <img className="video-container__img" src={videoImage} />
+          <img
+            className="video-container__img"
+            src={videoImage}
+            alt="video cover"
+          />
           <div className="input-wrapper">
             <form className="input">
               <label className="input__label" htmlFor="videoTitle">
