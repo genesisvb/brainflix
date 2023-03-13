@@ -2,20 +2,20 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
-    margin: 0 -1rem;
-    background: black;
+  // margin: 0 -1rem;
+  background: black;
 
-    @include tablet {
-        padding: 0rem 2rem;
-        margin: auto;
-    }
+  @include tablet {
+    padding: 0rem 2rem;
+    margin: auto;
+  }
 
-    @include desktop {
-        padding: 0 15rem;
-    }
+  @include desktop {
+    padding: 0 15rem;
+  }
 }
 
 .hero__video {
-    width: 100%;
-
+  width: 100%;
+  aspect-ratio: 16/9;
 }

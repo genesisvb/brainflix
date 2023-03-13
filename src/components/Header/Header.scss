@@ -3,6 +3,7 @@
 
 .nav {
   padding: 1rem;
+  border: 1px solid $secondary-color-medium;
 
   @include tablet {
     padding: 1rem 2rem;
@@ -46,7 +47,6 @@
     flex: 1;
     max-width: 100%;
     min-width: 13rem;
-    margin-bottom: 1rem;
     background-image: url("../../assets/Icons/search.svg");
     background-repeat: no-repeat;
     background-position: 1rem center;
@@ -64,7 +64,6 @@
     @include tablet {
       min-width: 15rem;
       min-height: 2.5rem;
-      margin-bottom: 0;
     }
   }
 
@@ -123,6 +122,8 @@
 
     @include tablet {
       order: 2;
+      margin-bottom: 0;
+      width: 9.375rem;
     }
   }
 
