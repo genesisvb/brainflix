@@ -34,7 +34,15 @@ function VideoUpload() {
           </div>
         </div>
         <div className="buttons">
-          <Link className="button button--publish">Publish</Link>
+          <Link
+            to="/"
+            className="button button--publish"
+            onClick={() => {
+              alert("Sorry, this feature is not available at this time");
+            }}
+          >
+            Publish
+          </Link>
           <Link to="/" className="link">
             Cancel
           </Link>
