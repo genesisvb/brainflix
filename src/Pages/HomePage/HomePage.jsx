@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./HomePage.scss";
-import Hero from "../../Hero/Hero";
-import VideoList from "../../VideoList/VideoList";
-import Content from "../../Content/Content";
-import CommentForm from "../../CommentForm/CommentForm";
-import CommentList from "../../CommentList/CommentList";
+import Hero from "../../components/Hero/Hero";
+import VideoList from "../../components/VideoList/VideoList";
+import Content from "../../components/Content/Content";
+import CommentForm from "../../components/CommentForm/CommentForm";
+import CommentList from "../../components/CommentList/CommentList";
 import axios from "axios";
 
 function HomePage() {
-  const api = "https://project-2-api.herokuapp.com";
-  const apiKey = "30f5f197-02c2-4997-aa84-d5f08fcfbf6c";
+  const api = "http://localhost:5000";
   const [videos, setVideos] = useState([]);
   const [selectedVideo, setSelectedVideo] = useState({});
   const { videoId } = useParams();
@@ -29,7 +28,7 @@ function HomePage() {
 
   function getVideos() {
     axios
-      .get(`${api}/videos/?api_key=${apiKey}`)
+      .get(`${api}/videos`)
       .then((response) => {
         setVideos(response.data);
       })
@@ -41,7 +40,7 @@ function HomePage() {
 
   function getVideo(videoId) {
     axios
-      .get(`${api}/videos/${videoId}?api_key=${apiKey}`)
+      .get(`${api}/videos/${videoId}`)
       .then((response) => {
         setSelectedVideo(response.data);
       })

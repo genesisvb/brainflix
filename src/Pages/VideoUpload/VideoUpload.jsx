@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./VideoUpload.scss";
-import videoImage from "../../../assets/images/Upload-video-preview.jpg";
+import videoImage from "../../assets/images/Upload-video-preview.jpg";
 
 function VideoUpload() {
   return (
@@ -12,7 +12,7 @@ function VideoUpload() {
           <img
             className="video-container__img"
             src={videoImage}
-            alt="video cover"
+            alt="video cover  "
           />
           <div className="input-wrapper">
             <form className="input">
