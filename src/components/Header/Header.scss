@@ -119,6 +119,7 @@
   &--publish {
     background-image: url("../../assets/Icons/publish.svg");
     margin-bottom: 1rem;
+    cursor: pointer;
 
     @include tablet {
       order: 2;
