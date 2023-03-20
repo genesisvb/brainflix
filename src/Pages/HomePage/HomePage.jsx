@@ -43,6 +43,7 @@ function HomePage() {
       .get(`${api}/videos/${videoId}`)
       .then((response) => {
         setSelectedVideo(response.data);
+        document.title = `Brainflix - ${response.data.title}`;
       })
 
       .catch((error) => {
