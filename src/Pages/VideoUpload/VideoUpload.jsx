@@ -2,14 +2,29 @@ import { Link } from "react-router-dom";
 import "./VideoUpload.scss";
 import videoImage from "../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function VideoUpload() {
   const navigate = useNavigate();
+  const api = "http://localhost:5000";
 
   function handleOnSubmit(e) {
     e.preventDefault();
-    alert("Your video has been uploaded successfully!");
-    navigate("/");
+    const videoData = {
+      title: e.target.title.value,
+      description: e.target.description.value,
+      image: "http://localhost:5000/images/Upload-video-preview.jpg",
+    };
+
+    axios
+      .post(`${api}/videos`, videoData)
+      .then((response) => {
+        alert("Your video has been uploaded successfully!");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
   return (
     <>
@@ -27,19 +42,18 @@ function VideoUpload() {
               <label className="input__label" htmlFor="videoTitle">
                 Title your video
               </label>
-              <textarea
+              <input
+                type="text"
                 className="input__field"
-                name="videoTitle"
-                id=""
+                name="title"
                 placeholder="Add a title to your video"
-              ></textarea>
+              />
               <label className="input__label" htmlFor="videoDescription">
                 Add a video description
               </label>
               <textarea
                 className="input__field input__field--large"
-                name="VideoDescription"
-                id=""
+                name="description"
                 placeholder="Add a description to your video"
               ></textarea>
               <div className="buttons">
@@ -59,39 +73,3 @@ function VideoUpload() {
 }
 
 export default VideoUpload;
-
-// /* ---------------------------
-//  * Post Jokes
-//  * To make a new joke we POST to https://developerjokes.herokuapp.com/jokes?api_key=neocat
-//  * How to make a post request? https://axios-http.com/docs/post_example
-//  */
-
-// jokeForm.addEventListener("submit", (e) => {
-//   e.preventDefault();
-
-//   const jokeInfo = {
-//     question: e.target.question.value,
-//     answer: e.target.answer.value,
-//   };
-
-//   axios
-//     .post(`${apiUrl}/jokes?api_key=${apiKey}`, jokeInfo)
-//     .then((response) => {
-//       console.log("response: ", response);
-
-//       const data = response.data;
-//       const updatedJokes = data.jokes;
-
-//       jokesList.innerHTML = "";
-//       updatedJokes.forEach((joke) => {
-//         renderJoke(joke.question, joke.answer, jokesList);
-//       });
-
-//       // after submission, we clear the form for better use experience!
-//       e.target.question.value = "";
-//       e.target.answer.value = "";
-//     })
-//     .catch((error) => {
-//       console.log("error: ", error);
-//     });
-// });
