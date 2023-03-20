@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import "./VideoUpload.scss";
-import videoImage from "../../assets/images/Upload-video-preview.jpg";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+
+const placeholderImage =
+  "http://localhost:5000/images/Upload-video-preview.jpg";
 
 function VideoUpload() {
   const navigate = useNavigate();
@@ -13,7 +15,7 @@ function VideoUpload() {
     const videoData = {
       title: e.target.title.value,
       description: e.target.description.value,
-      image: "http://localhost:5000/images/Upload-video-preview.jpg",
+      image: placeholderImage,
     };
 
     axios
@@ -34,7 +36,7 @@ function VideoUpload() {
         <div className="video-container">
           <img
             className="video-container__img"
-            src={videoImage}
+            src={placeholderImage}
             alt="video cover  "
           />
           <div className="input-wrapper">
